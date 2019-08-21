@@ -12,7 +12,7 @@ module.exports = function restricted(req, res, next) {
         console.log(err)
         res.status(401).json({message: 'you shall not pass, invalid token'})
       } else {
-        // good token
+        // goood token
         req.user = { username: decodedToken.username}
         next();
       }
