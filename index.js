@@ -25,7 +25,7 @@ server.use('/api/auth', authRouter)
 
 
 // can only be accessed by clients with valid credentials
-server.get('/api/users', restricted, (req, res) => {
+server.get('/api/users',  restricted, (req, res) => {
   Users.find()
     .then(users => {
       res.json(users);
