@@ -41,6 +41,10 @@ router.post('/register', (req, res) => {
       });
   });
 
+  router.delete('/:id', (req,res)=>{
+    console.log(req.params)
+  })
+
   function generateToken(user) {
     const payload = {
       subject: user.id,
